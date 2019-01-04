@@ -4,7 +4,9 @@ final class RecordingManager {
     
     static let shared = RecordingManager()
     
-    private(set) var videoProcess: Process?
+    private var videoProcess: Process?
+    private var menuItem: NSMenuItem?
+    private var isRecording: Bool { return videoProcess != nil }
     
     private var currentDateString: String {
         let dateFormatter = DateFormatter()
@@ -12,13 +14,24 @@ final class RecordingManager {
         
         return dateFormatter.string(from: Date())
     }
+
+    func toggleRecording(_ menuItem: NSMenuItem?) {
+        self.menuItem = menuItem
+        
+        if isRecording {
+            stopRecording()
+            menuItem?.title = "Processing..."
+            menuItem?.isEnabled = false
+        } else {
+            startRecording()
+            menuItem?.title = "Stop Recording"
+        }
+    }
     
     func startRecording() {
-        stopRecording()
-        
         let fileName = "Screen Recording \(currentDateString).mov"
         
-        self.videoProcess = run(launchPath: "/usr/bin", command: "xcrun", arguments: ["simctl", "io", "booted", "recordVideo", fileName]) {
+        videoProcess = run(launchPath: "/usr/bin", command: "xcrun", arguments: ["simctl", "io", "booted", "recordVideo", fileName]) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.convertGif(from: fileName)
             }
@@ -51,6 +64,10 @@ final class RecordingManager {
         } catch {
             print("Error: \(error)")
         }
+
+        videoProcess = nil
+        menuItem?.title = "Start Recording"
+        menuItem?.isEnabled = true
     }
     
     @discardableResult
@@ -71,12 +88,5 @@ final class RecordingManager {
 }
 
 extension String {
-    
-    var fileName: String {
-        return NSURL(fileURLWithPath: self).deletingPathExtension?.lastPathComponent ?? ""
-    }
-    
-    var fileExtension: String {
-        return NSURL(fileURLWithPath: self).pathExtension ?? ""
-    }
+    var fileName: String { return URL(fileURLWithPath: self).deletingPathExtension().lastPathComponent }
 }
