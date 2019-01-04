@@ -16,9 +16,11 @@ final class RecordingManager {
     func startRecording() {
         stopRecording()
         
-        self.videoProcess = run(launchPath: "/usr/bin", command: "xcrun", arguments: ["simctl", "io", "booted", "recordVideo", "recording.mov"]) {
+        let fileName = "Screen Recording \(currentDateString).mov"
+        
+        self.videoProcess = run(launchPath: "/usr/bin", command: "xcrun", arguments: ["simctl", "io", "booted", "recordVideo", fileName]) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.convertGif(from: "recording.mov")
+                self.convertGif(from: fileName)
             }
         }
     }
@@ -28,21 +30,27 @@ final class RecordingManager {
     }
     
     private func convertGif(from fileName: String) {
-        let finalFileName = "Screen Recording \(currentDateString)"
+        let gifFileName = "\(fileName.fileName ).gif"
         
-        run(launchPath: "/usr/local/bin", command: "ffmpeg", arguments:  ["-i", fileName, "-f", "gif", finalFileName]) {
-            self.optimizeGif(finalFileName)
+        run(launchPath: "/usr/local/bin", command: "ffmpeg", arguments:  ["-i", fileName, "-f", "gif", gifFileName]) {
+            self.optimizeGif(gifFileName)
         }
     }
     
     private func optimizeGif(_ fileName: String) {
-        run(launchPath: "/usr/local/bin", command: "gifsicle", arguments: ["-O3", fileName, "-o", fileName]) {
+        run(launchPath: "/usr/local/bin", command: "gifsicle", arguments: ["-O2", fileName, "-o", fileName]) {
             self.moveToDesktop(fileName)
         }
     }
     
     private func moveToDesktop(_ fileName: String) {
-        run(launchPath: "/bin", command: "mv", arguments: [fileName, "~/Desktop"])
+        guard let desktopPath = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, true).first else { return }
+        
+        do {
+            try FileManager.default.copyItem(atPath: fileName, toPath: "\(desktopPath)/\(fileName)")
+        } catch {
+            print("Error: \(error)")
+        }
     }
     
     @discardableResult
@@ -60,4 +68,15 @@ final class RecordingManager {
         return process
     }
 
+}
+
+extension String {
+    
+    var fileName: String {
+        return NSURL(fileURLWithPath: self).deletingPathExtension?.lastPathComponent ?? ""
+    }
+    
+    var fileExtension: String {
+        return NSURL(fileURLWithPath: self).pathExtension ?? ""
+    }
 }
