@@ -24,12 +24,16 @@ final class RecordingManager {
     func startRecording() {
         videoProcess = RecordSimulator.record { filepath in
             self.menuItem?.title = "Converting..."
+            let convertDate = Date()
             ConvertGif.convert(filepath) {
+                print("Converting: \(abs(convertDate.timeIntervalSinceNow))")
                 self.menuItem?.title = "Optimizing..."
+                let optimizeDate = Date()
                 OptimizeGif.optimize(filepath) {
                     self.videoProcess = nil
                     self.menuItem?.title = "Start Recording"
                     self.menuItem?.isEnabled = true
+                    print("Optimizing: \(abs(optimizeDate.timeIntervalSinceNow))")
                 }
             }
         }
