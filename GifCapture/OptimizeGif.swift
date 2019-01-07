@@ -11,9 +11,8 @@ enum OptimizeGif {
     }
 
     static func optimize(_ filename: String, optimizationLevel: Int = 2, completion: @escaping () -> Void) {
-        guard let desktopPath = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, true).first else { return }
-        
-        let arguments = ["-i", filename.gif, "-O\(optimizationLevel)", "--output", "\(desktopPath)/\(filename.gif)"]
+        let outputPath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop").appendingPathComponent(filename.gif).path
+        let arguments = ["-i", filename.gif, "-O\(optimizationLevel)", "--output", outputPath]
 
         Process.run(path, arguments: arguments, completion: completion)
     }
