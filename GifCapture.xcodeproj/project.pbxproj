@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D02B76121E274DB009B12E4 /* OptimizeGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76021E274DB009B12E4 /* OptimizeGif.swift */; };
+		7D02B76321E27589009B12E4 /* ProcessExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76221E27589009B12E4 /* ProcessExtension.swift */; };
+		7D02B76521E27AD1009B12E4 /* RecordSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */; };
+		7D02B76721E29447009B12E4 /* ConvertGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76621E29447009B12E4 /* ConvertGif.swift */; };
+		7D02B76921E29490009B12E4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76821E29490009B12E4 /* StringExtension.swift */; };
+		7D02B76D21E2A8C9009B12E4 /* gifsicle in Resources */ = {isa = PBXBuildFile; fileRef = 7D02B76C21E2A8C9009B12E4 /* gifsicle */; };
 		7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4732321D03EDE00165592 /* AppDelegate.swift */; };
 		7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732721D03EDF00165592 /* Assets.xcassets */; };
 		7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732921D03EDF00165592 /* Main.storyboard */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D02B76021E274DB009B12E4 /* OptimizeGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizeGif.swift; sourceTree = "<group>"; };
+		7D02B76221E27589009B12E4 /* ProcessExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessExtension.swift; sourceTree = "<group>"; };
+		7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSimulator.swift; sourceTree = "<group>"; };
+		7D02B76621E29447009B12E4 /* ConvertGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertGif.swift; sourceTree = "<group>"; };
+		7D02B76821E29490009B12E4 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7D02B76C21E2A8C9009B12E4 /* gifsicle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = gifsicle; path = "../../../../../Downloads/GIFPop-master/GIFPop/gifsicle"; sourceTree = "<group>"; };
 		7DB4732021D03EDE00165592 /* GifCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB4732321D03EDE00165592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB4732721D03EDF00165592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +46,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D02B76A21E295C5009B12E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7D02B76221E27589009B12E4 /* ProcessExtension.swift */,
+				7D02B76821E29490009B12E4 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7D02B76B21E29B8C009B12E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7DB4732D21D03EDF00165592 /* GifCapture.entitlements */,
+				7D02B76C21E2A8C9009B12E4 /* gifsicle */,
+				7DB4732C21D03EDF00165592 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7DB4731721D03EDE00165592 = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +86,13 @@
 			children = (
 				7DB4732321D03EDE00165592 /* AppDelegate.swift */,
 				7DB4732721D03EDF00165592 /* Assets.xcassets */,
-				7DB4732D21D03EDF00165592 /* GifCapture.entitlements */,
-				7DB4732C21D03EDF00165592 /* Info.plist */,
+				7D02B76621E29447009B12E4 /* ConvertGif.swift */,
+				7D02B76A21E295C5009B12E4 /* Extensions */,
 				7DB4732921D03EDF00165592 /* Main.storyboard */,
+				7D02B76021E274DB009B12E4 /* OptimizeGif.swift */,
+				7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */,
 				7DB4733321D03F3000165592 /* RecordingManager.swift */,
+				7D02B76B21E29B8C009B12E4 /* Resources */,
 			);
 			path = GifCapture;
 			sourceTree = "<group>";
@@ -127,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */,
+				7D02B76D21E2A8C9009B12E4 /* gifsicle in Resources */,
 				7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D02B76721E29447009B12E4 /* ConvertGif.swift in Sources */,
+				7D02B76921E29490009B12E4 /* StringExtension.swift in Sources */,
+				7D02B76521E27AD1009B12E4 /* RecordSimulator.swift in Sources */,
 				7DB4733421D03F3000165592 /* RecordingManager.swift in Sources */,
+				7D02B76321E27589009B12E4 /* ProcessExtension.swift in Sources */,
 				7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */,
+				7D02B76121E274DB009B12E4 /* OptimizeGif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
-				INFOPLIST_FILE = GifCapture/Info.plist;
+				INFOPLIST_FILE = GifCapture/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -297,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
-				INFOPLIST_FILE = GifCapture/Info.plist;
+				INFOPLIST_FILE = GifCapture/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
