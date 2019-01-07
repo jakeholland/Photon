@@ -24,6 +24,7 @@ final class RecordingManager {
     func startRecording() {
         videoProcess = RecordSimulator.record { filename in
             ConvertGif.convert(filename) {
+                self.removeVideo(filename)
                 OptimizeGif.optimize(filename) {
                     self.videoProcess = nil
                     self.menuItem?.title = "Start Recording"
@@ -35,6 +36,10 @@ final class RecordingManager {
     
     func stopRecording() {
         videoProcess?.interrupt()
+    }
+
+    private func removeVideo(_ filename: String) {
+        try? FileManager.default.removeItem(at: URL(fileURLWithPath: filename.mov))
     }
 
 }
