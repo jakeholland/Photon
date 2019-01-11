@@ -8,6 +8,8 @@ final class RecordingManager {
     private var recordbutton: NSButton?
     private var isRecording: Bool { return videoProcess != nil }
 
+    private init() { }
+
     func toggleRecording(_ recordbutton: NSButton) {
         self.recordbutton = recordbutton
         
