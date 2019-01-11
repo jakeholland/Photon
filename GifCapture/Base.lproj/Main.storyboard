@@ -10,11 +10,11 @@
             <objects>
                 <viewController title="Gif Capture" id="IwA-F1-crf" customClass="MainViewController" customModule="GifCapture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="GRN-BL-x4U">
-                        <rect key="frame" x="0.0" y="0.0" width="274" height="181"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ESK-53-16Y">
-                                <rect key="frame" x="116" y="13" width="144" height="32"/>
+                                <rect key="frame" x="142" y="13" width="144" height="32"/>
                                 <buttonCell key="cell" type="push" title="Record Simulator" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Su-DM-IF8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -24,10 +24,10 @@
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="nmv-SM-UqL" customClass="DragView" customModule="GifCapture" customModuleProvider="target">
-                                <rect key="frame" x="20" y="61" width="234" height="100"/>
+                                <rect key="frame" x="20" y="61" width="260" height="219"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="92u-h4-Mfe">
-                                        <rect key="frame" x="32" y="42" width="170" height="17"/>
+                                        <rect key="frame" x="45" y="101" width="170" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="DROP VIDEO TO CONVERT" id="QMh-gw-QvG">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -125,9 +125,9 @@
                     <window key="window" title="Gif Capture" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="OE5-0a-yXd" userLabel="Gif Capture">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="642"/>
+                        <rect key="contentRect" x="196" y="240" width="300" height="300"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
-                        <value key="minSize" type="size" width="480" height="642"/>
+                        <value key="minSize" type="size" width="300" height="300"/>
                     </window>
                     <connections>
                         <segue destination="IwA-F1-crf" kind="relationship" relationship="window.shadowedContentViewController" id="uN7-n9-U8Z"/>
