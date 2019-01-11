@@ -5,35 +5,33 @@ final class RecordingManager {
     static let shared = RecordingManager()
     
     private var videoProcess: Process?
-    private var menuItem: NSMenuItem?
+    private var recordbutton: NSButton?
     private var isRecording: Bool { return videoProcess != nil }
 
-    func toggleRecording(_ menuItem: NSMenuItem?) {
-        self.menuItem = menuItem
+    func toggleRecording(_ recordbutton: NSButton) {
+        self.recordbutton = recordbutton
         
         if isRecording {
             stopRecording()
-            menuItem?.title = "Processing..."
-            menuItem?.isEnabled = false
+            updateButton(title: "Processing...", enabled: false)
         } else {
             startRecording()
-            menuItem?.title = "Stop Recording"
+            updateButton(title: "Stop Recording", enabled: true)
         }
     }
     
     func startRecording() {
         videoProcess = RecordSimulator.record { filepath in
-            self.menuItem?.title = "Converting..."
-            let convertDate = Date()
+
+            self.updateButton(title: "Converting...", enabled: false)
+
             ConvertGif.convert(filepath) {
-                print("Converting: \(abs(convertDate.timeIntervalSinceNow))")
-                self.menuItem?.title = "Optimizing..."
-                let optimizeDate = Date()
+
+                self.updateButton(title: "Optimizing...", enabled: false)
+
                 OptimizeGif.optimize(filepath) {
                     self.videoProcess = nil
-                    self.menuItem?.title = "Start Recording"
-                    self.menuItem?.isEnabled = true
-                    print("Optimizing: \(abs(optimizeDate.timeIntervalSinceNow))")
+                    self.updateButton(title: "Start Recording", enabled: true)
                 }
             }
         }
@@ -41,6 +39,13 @@ final class RecordingManager {
     
     func stopRecording() {
         videoProcess?.interrupt()
+    }
+
+    private func updateButton(title: String, enabled: Bool) {
+        DispatchQueue.main.async {
+            self.recordbutton?.title = title
+            self.recordbutton?.isEnabled = enabled
+        }
     }
 
 }

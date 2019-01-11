@@ -17,6 +17,8 @@
 		7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732921D03EDF00165592 /* Main.storyboard */; };
 		7DB4733421D03F3000165592 /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4733321D03F3000165592 /* RecordingManager.swift */; };
 		BF04972621E3E837008425CB /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF04972521E3E837008425CB /* ffmpeg */; };
+		BF17AFA921E8F2DB00906F25 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17AFA821E8F2DB00906F25 /* MainViewController.swift */; };
+		BF17AFAC21E8F89F00906F25 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17AFAB21E8F89F00906F25 /* DragView.swift */; };
 		BFECC3E521E3972500B3E0FB /* gifsicle in Resources */ = {isa = PBXBuildFile; fileRef = BFECC3E421E3972500B3E0FB /* gifsicle */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		7DB4732D21D03EDF00165592 /* GifCapture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifCapture.entitlements; sourceTree = "<group>"; };
 		7DB4733321D03F3000165592 /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
 		BF04972521E3E837008425CB /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
+		BF17AFA821E8F2DB00906F25 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BF17AFAB21E8F89F00906F25 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 		BFECC3E421E3972500B3E0FB /* gifsicle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = gifsicle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +98,8 @@
 				BF17AFA621E8F21C00906F25 /* Helpers */,
 				7DB4732921D03EDF00165592 /* Main.storyboard */,
 				7D02B76B21E29B8C009B12E4 /* Resources */,
+				BF17AFA721E8F2C400906F25 /* View Controllers */,
+				BF17AFAA21E8F88F00906F25 /* Views */,
 			);
 			path = GifCapture;
 			sourceTree = "<group>";
@@ -106,6 +112,22 @@
 				7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF17AFA721E8F2C400906F25 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF17AFA821E8F2DB00906F25 /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BF17AFAA21E8F88F00906F25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF17AFAB21E8F89F00906F25 /* DragView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +214,8 @@
 				7D02B76321E27589009B12E4 /* ProcessExtension.swift in Sources */,
 				7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */,
 				7D02B76121E274DB009B12E4 /* OptimizeGif.swift in Sources */,
+				BF17AFA921E8F2DB00906F25 /* MainViewController.swift in Sources */,
+				BF17AFAC21E8F89F00906F25 /* DragView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

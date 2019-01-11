@@ -8,9 +8,10 @@ enum OptimizeGif {
         return path
     }
 
-    static func optimize(_ filename: String, optimizationLevel: Int = 3, completion: @escaping () -> Void) {
+    static func optimize(_ filepath: String, optimizationLevel: Int = 3, completion: @escaping () -> Void) {
+        let filename = URL(fileURLWithPath: filepath).lastPathComponent
         let outputPath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Desktop").appendingPathComponent(filename.gif).path
-        let arguments = ["-i", filename.gif, "-O\(optimizationLevel)", "--colors", "128", "--output", outputPath]
+        let arguments = ["-i", filepath.gif, "-O\(optimizationLevel)", "--colors", "128", "--output", outputPath]
 
         Process.run(gifsiclePath, arguments: arguments, completion: completion)
     }
