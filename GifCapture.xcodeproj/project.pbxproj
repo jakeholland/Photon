@@ -88,16 +88,24 @@
 			isa = PBXGroup;
 			children = (
 				7DB4732321D03EDE00165592 /* AppDelegate.swift */,
-				7DB4732721D03EDF00165592 /* Assets.xcassets */,
-				7D02B76621E29447009B12E4 /* ConvertGif.swift */,
-				7D02B76A21E295C5009B12E4 /* Extensions */,
-				7DB4732921D03EDF00165592 /* Main.storyboard */,
-				7D02B76021E274DB009B12E4 /* OptimizeGif.swift */,
-				7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */,
 				7DB4733321D03F3000165592 /* RecordingManager.swift */,
+				7DB4732721D03EDF00165592 /* Assets.xcassets */,
+				7D02B76A21E295C5009B12E4 /* Extensions */,
+				BF17AFA621E8F21C00906F25 /* Helpers */,
+				7DB4732921D03EDF00165592 /* Main.storyboard */,
 				7D02B76B21E29B8C009B12E4 /* Resources */,
 			);
 			path = GifCapture;
+			sourceTree = "<group>";
+		};
+		BF17AFA621E8F21C00906F25 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7D02B76621E29447009B12E4 /* ConvertGif.swift */,
+				7D02B76021E274DB009B12E4 /* OptimizeGif.swift */,
+				7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
