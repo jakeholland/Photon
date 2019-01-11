@@ -16,9 +16,13 @@
 		7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732721D03EDF00165592 /* Assets.xcassets */; };
 		7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732921D03EDF00165592 /* Main.storyboard */; };
 		7DB4733421D03F3000165592 /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4733321D03F3000165592 /* RecordingManager.swift */; };
-		BF04972621E3E837008425CB /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF04972521E3E837008425CB /* ffmpeg */; };
 		BF17AFA921E8F2DB00906F25 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17AFA821E8F2DB00906F25 /* MainViewController.swift */; };
 		BF17AFAC21E8F89F00906F25 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17AFAB21E8F89F00906F25 /* DragView.swift */; };
+		BF9CE86621E9121500861CD0 /* WindowRecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */; };
+		BF9CE86821E9145200861CD0 /* RecordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE86721E9145200861CD0 /* RecordScreen.swift */; };
+		BF9CE86A21E925DC00861CD0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE86921E925DC00861CD0 /* DateExtension.swift */; };
+		BF9CE86C21E936E200861CD0 /* NSScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE86B21E936E200861CD0 /* NSScreenExtension.swift */; };
+		BF9CE87021E94F0B00861CD0 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF9CE86F21E94F0B00861CD0 /* ffmpeg */; };
 		BFECC3E521E3972500B3E0FB /* gifsicle in Resources */ = {isa = PBXBuildFile; fileRef = BFECC3E421E3972500B3E0FB /* gifsicle */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +39,13 @@
 		7DB4732C21D03EDF00165592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DB4732D21D03EDF00165592 /* GifCapture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifCapture.entitlements; sourceTree = "<group>"; };
 		7DB4733321D03F3000165592 /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
-		BF04972521E3E837008425CB /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 		BF17AFA821E8F2DB00906F25 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF17AFAB21E8F89F00906F25 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
+		BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowRecordingManager.swift; sourceTree = "<group>"; };
+		BF9CE86721E9145200861CD0 /* RecordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordScreen.swift; sourceTree = "<group>"; };
+		BF9CE86921E925DC00861CD0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BF9CE86B21E936E200861CD0 /* NSScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSScreenExtension.swift; sourceTree = "<group>"; };
+		BF9CE86F21E94F0B00861CD0 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 		BFECC3E421E3972500B3E0FB /* gifsicle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = gifsicle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +63,8 @@
 		7D02B76A21E295C5009B12E4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BF9CE86921E925DC00861CD0 /* DateExtension.swift */,
+				BF9CE86B21E936E200861CD0 /* NSScreenExtension.swift */,
 				7D02B76221E27589009B12E4 /* ProcessExtension.swift */,
 				7D02B76821E29490009B12E4 /* StringExtension.swift */,
 			);
@@ -64,7 +74,7 @@
 		7D02B76B21E29B8C009B12E4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BF04972521E3E837008425CB /* ffmpeg */,
+				BF9CE86F21E94F0B00861CD0 /* ffmpeg */,
 				7DB4732D21D03EDF00165592 /* GifCapture.entitlements */,
 				BFECC3E421E3972500B3E0FB /* gifsicle */,
 				7DB4732C21D03EDF00165592 /* Info.plist */,
@@ -93,6 +103,7 @@
 			children = (
 				7DB4732321D03EDE00165592 /* AppDelegate.swift */,
 				7DB4733321D03F3000165592 /* RecordingManager.swift */,
+				BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */,
 				7DB4732721D03EDF00165592 /* Assets.xcassets */,
 				7D02B76A21E295C5009B12E4 /* Extensions */,
 				BF17AFA621E8F21C00906F25 /* Helpers */,
@@ -110,6 +121,7 @@
 				7D02B76621E29447009B12E4 /* ConvertGif.swift */,
 				7D02B76021E274DB009B12E4 /* OptimizeGif.swift */,
 				7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */,
+				BF9CE86721E9145200861CD0 /* RecordScreen.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -196,7 +208,7 @@
 				7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */,
 				BFECC3E521E3972500B3E0FB /* gifsicle in Resources */,
 				7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */,
-				BF04972621E3E837008425CB /* ffmpeg in Resources */,
+				BF9CE87021E94F0B00861CD0 /* ffmpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,13 +220,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D02B76721E29447009B12E4 /* ConvertGif.swift in Sources */,
+				BF9CE86A21E925DC00861CD0 /* DateExtension.swift in Sources */,
 				7D02B76921E29490009B12E4 /* StringExtension.swift in Sources */,
 				7D02B76521E27AD1009B12E4 /* RecordSimulator.swift in Sources */,
+				BF9CE86621E9121500861CD0 /* WindowRecordingManager.swift in Sources */,
 				7DB4733421D03F3000165592 /* RecordingManager.swift in Sources */,
 				7D02B76321E27589009B12E4 /* ProcessExtension.swift in Sources */,
 				7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */,
+				BF9CE86C21E936E200861CD0 /* NSScreenExtension.swift in Sources */,
 				7D02B76121E274DB009B12E4 /* OptimizeGif.swift in Sources */,
 				BF17AFA921E8F2DB00906F25 /* MainViewController.swift in Sources */,
+				BF9CE86821E9145200861CD0 /* RecordScreen.swift in Sources */,
 				BF17AFAC21E8F89F00906F25 /* DragView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

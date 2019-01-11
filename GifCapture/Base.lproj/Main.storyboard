@@ -10,24 +10,24 @@
             <objects>
                 <viewController title="Gif Capture" id="IwA-F1-crf" customClass="MainViewController" customModule="GifCapture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="GRN-BL-x4U">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ESK-53-16Y">
-                                <rect key="frame" x="142" y="13" width="144" height="32"/>
+                                <rect key="frame" x="174" y="13" width="162" height="32"/>
                                 <buttonCell key="cell" type="push" title="Record Simulator" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Su-DM-IF8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="recordButtonPressed:" target="IwA-F1-crf" id="jqm-fD-kHr"/>
+                                    <action selector="recordSimulatorButtonPressed:" target="IwA-F1-crf" id="IwQ-79-iE7"/>
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="nmv-SM-UqL" customClass="DragView" customModule="GifCapture" customModuleProvider="target">
-                                <rect key="frame" x="20" y="61" width="260" height="219"/>
+                                <rect key="frame" x="20" y="61" width="310" height="219"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="92u-h4-Mfe">
-                                        <rect key="frame" x="45" y="101" width="170" height="17"/>
+                                        <rect key="frame" x="70" y="101" width="170" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="DROP VIDEO TO CONVERT" id="QMh-gw-QvG">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -41,15 +41,29 @@
                                     <constraint firstItem="92u-h4-Mfe" firstAttribute="centerX" secondItem="nmv-SM-UqL" secondAttribute="centerX" id="ydV-ut-cpu"/>
                                 </constraints>
                             </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7d0-Ck-gtR">
+                                <rect key="frame" x="14" y="13" width="162" height="32"/>
+                                <buttonCell key="cell" type="push" title="Record Screen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gNo-Is-ULT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="recordScreenButtonPressed:" target="IwA-F1-crf" id="LNu-X0-Y1A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ESK-53-16Y" secondAttribute="bottom" constant="20" id="0X6-8L-GOi"/>
-                            <constraint firstItem="ESK-53-16Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GRN-BL-x4U" secondAttribute="leading" constant="20" id="7nh-uo-xYd"/>
+                            <constraint firstItem="7d0-Ck-gtR" firstAttribute="width" secondItem="ESK-53-16Y" secondAttribute="width" id="ERJ-dR-wcT"/>
                             <constraint firstItem="nmv-SM-UqL" firstAttribute="top" secondItem="GRN-BL-x4U" secondAttribute="top" constant="20" id="GZ4-pG-yBC"/>
                             <constraint firstAttribute="trailing" secondItem="nmv-SM-UqL" secondAttribute="trailing" constant="20" id="IBv-Yc-sPB"/>
                             <constraint firstItem="nmv-SM-UqL" firstAttribute="leading" secondItem="GRN-BL-x4U" secondAttribute="leading" constant="20" id="Jrm-FE-aOm"/>
+                            <constraint firstAttribute="bottom" secondItem="7d0-Ck-gtR" secondAttribute="bottom" constant="20" id="SYz-yt-q7T"/>
+                            <constraint firstItem="7d0-Ck-gtR" firstAttribute="top" secondItem="nmv-SM-UqL" secondAttribute="bottom" constant="20" id="ZDs-4f-vHw"/>
                             <constraint firstAttribute="trailing" secondItem="ESK-53-16Y" secondAttribute="trailing" constant="20" id="rvP-6C-Z20"/>
+                            <constraint firstItem="ESK-53-16Y" firstAttribute="leading" secondItem="7d0-Ck-gtR" secondAttribute="trailing" constant="10" id="v6A-IE-rAM"/>
                             <constraint firstItem="ESK-53-16Y" firstAttribute="top" secondItem="nmv-SM-UqL" secondAttribute="bottom" constant="20" id="wB0-qv-jej"/>
+                            <constraint firstItem="7d0-Ck-gtR" firstAttribute="leading" secondItem="GRN-BL-x4U" secondAttribute="leading" constant="20" id="yb4-iN-9Bt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -125,10 +139,10 @@
                     <window key="window" title="Gif Capture" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="OE5-0a-yXd" userLabel="Gif Capture">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="300" height="300"/>
+                        <rect key="contentRect" x="196" y="240" width="350" height="300"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
-                        <value key="minSize" type="size" width="300" height="300"/>
-                        <value key="maxSize" type="size" width="300" height="300"/>
+                        <value key="minSize" type="size" width="350" height="300"/>
+                        <value key="maxSize" type="size" width="350" height="300"/>
                     </window>
                     <connections>
                         <segue destination="IwA-F1-crf" kind="relationship" relationship="window.shadowedContentViewController" id="uN7-n9-U8Z"/>

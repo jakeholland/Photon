@@ -5,13 +5,13 @@ final class RecordingManager {
     static let shared = RecordingManager()
     
     private var videoProcess: Process?
-    private var recordbutton: NSButton?
+    private var recordButton: NSButton?
     private var isRecording: Bool { return videoProcess != nil }
 
     private init() { }
 
     func toggleRecording(_ recordbutton: NSButton) {
-        self.recordbutton = recordbutton
+        self.recordButton = recordbutton
         
         if isRecording {
             stopRecording()
@@ -33,7 +33,7 @@ final class RecordingManager {
 
                 OptimizeGif.optimize(filepath) {
                     self.videoProcess = nil
-                    self.updateButton(title: "Start Recording", enabled: true)
+                    self.updateButton(title: "Record Simulator", enabled: true)
                 }
             }
         }
@@ -45,8 +45,8 @@ final class RecordingManager {
 
     private func updateButton(title: String, enabled: Bool) {
         DispatchQueue.main.async {
-            self.recordbutton?.title = title
-            self.recordbutton?.isEnabled = enabled
+            self.recordButton?.title = title
+            self.recordButton?.isEnabled = enabled
         }
     }
 

@@ -3,7 +3,7 @@ import Foundation
 enum ConvertGif {
 
     enum Constants {
-        static let maximumSize = 1080
+        static let maximumSize = 720
         static let defaultFramerate = 10
     }
 
@@ -14,7 +14,14 @@ enum ConvertGif {
     }
 
     static func convert(_ filepath: String, framerate: Int = Constants.defaultFramerate, completion: @escaping () -> Void) {
-        Process.run(ffmpegPath, arguments: ["-i", filepath, "-vf", "scale=\(Constants.maximumSize):-1", "-r", "\(framerate)", "-y", "-f", "gif", filepath.gif], completion: completion)
+        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "fps=\(framerate),scale=\(Constants.maximumSize):-1", filepath.gif], completion: completion)
+    }
+
+    static func convertUsingPalette(_ filepath: String, framerate: Int = Constants.defaultFramerate, completion: @escaping () -> Void) {
+        let palettePath = "palette.png"
+        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "fps=\(framerate),scale=\(Constants.maximumSize):-1:flags=lanczos,palettegen", palettePath]) {
+            Process.run(ffmpegPath, arguments: ["-i", filepath, "-i", palettePath, "-filter_complex", "fps=\(framerate),scale=\(Constants.maximumSize):-1:flags=lanczos[x];[x][1:v]paletteuse", filepath.gif], completion: completion)
+        }
     }
 
 }
