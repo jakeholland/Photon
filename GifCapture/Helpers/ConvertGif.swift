@@ -19,8 +19,10 @@ enum ConvertGif {
 
     static func convertUsingPalette(_ filepath: String, framerate: Int = Constants.defaultFramerate, completion: @escaping () -> Void) {
         let palettePath = "palette.png"
-        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "fps=\(framerate),scale=\(Constants.maximumSize):-1:flags=lanczos,palettegen", palettePath]) {
-            Process.run(ffmpegPath, arguments: ["-i", filepath, "-i", palettePath, "-filter_complex", "fps=\(framerate),scale=\(Constants.maximumSize):-1:flags=lanczos[x];[x][1:v]paletteuse", filepath.gif], completion: completion)
+        let filters = "fps=\(framerate),scale=\(Constants.maximumSize):-1:flags=lanczos"
+
+        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "\(filters),palettegen", palettePath]) {
+            Process.run(ffmpegPath, arguments: ["-i", filepath, "-i", palettePath, "-lavfi", "\(filters)[x];[x][1:v]paletteuse", filepath.gif], completion: completion)
         }
     }
 
