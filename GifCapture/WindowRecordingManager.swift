@@ -1,48 +1,46 @@
-import AppKit
+import Cocoa
 
 final class WindowRecordingManager {
 
-    var runningApps: [NSRunningApplication] { return NSWorkspace.shared.runningApplications.filter { $0.activationPolicy == .regular } }
-    var windowList: [[String: AnyObject]] { return CGWindowListCopyWindowInfo(.optionIncludingWindow, CGWindowID(0)) as NSArray? as? [[String: AnyObject]] ?? [] }
-    var screens: [NSScreen] { return NSScreen.screens }
+    static let shared = WindowRecordingManager()
 
+    private var videoProcess: Process?
     private var recordButton: NSButton?
-    private var recordScreen: RecordScreen?
-    private var isRecording: Bool { return recordScreen != nil }
+    private var isRecording: Bool { return videoProcess != nil }
 
-    func toggleRecording(screen: NSScreen?, recordButton: NSButton) {
+    private init() { }
+
+    func toggleRecording(screenId: CGDirectDisplayID?, recordButton: NSButton) {
         self.recordButton = recordButton
 
         if isRecording {
             stopRecording()
             updateButton(title: "Processing...", enabled: false)
-        } else if let screen = screen{
-            startRecording(screen)
-            updateButton(title: "Stop Recording", enabled: true)
+        } else {
+            startRecording(screenId: screenId)
+            updateButton(title: "Stop", enabled: true)
         }
     }
 
-    func startRecording(_ screen: NSScreen) {
-        recordScreen = RecordScreen(screenId: screen.screenId)
-
-        recordScreen?.startRecording { outputFileURL in
+    func startRecording(screenId: CGDirectDisplayID?) {
+        videoProcess = RecordScreen.record(screenId: screenId) { filepath in
 
             self.updateButton(title: "Converting...", enabled: false)
 
-            ConvertGif.convert(outputFileURL.relativePath) {
+            ConvertGif.convert(filepath) {
 
                 self.updateButton(title: "Optimizing...", enabled: false)
-                
-                OptimizeGif.optimize(outputFileURL.relativePath) {
-                    self.updateButton(title: "Record Screen", enabled: true)
-                    self.recordScreen = nil
+
+                OptimizeGif.optimize(filepath) {
+                    self.videoProcess = nil
+                    self.updateButton(title: "Record", enabled: true)
                 }
             }
         }
     }
 
     func stopRecording() {
-        recordScreen?.stopRecording()
+        videoProcess?.interrupt()
     }
 
     private func updateButton(title: String, enabled: Bool) {

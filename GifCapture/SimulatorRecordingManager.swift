@@ -1,8 +1,8 @@
 import Cocoa
 
-final class RecordingManager {
+final class SimulatorRecordingManager {
     
-    static let shared = RecordingManager()
+    static let shared = SimulatorRecordingManager()
     
     private var videoProcess: Process?
     private var recordButton: NSButton?
@@ -18,7 +18,7 @@ final class RecordingManager {
             updateButton(title: "Processing...", enabled: false)
         } else {
             startRecording()
-            updateButton(title: "Stop Recording", enabled: true)
+            updateButton(title: "Stop", enabled: true)
         }
     }
     
@@ -33,7 +33,7 @@ final class RecordingManager {
 
                 OptimizeGif.optimize(filepath) {
                     self.videoProcess = nil
-                    self.updateButton(title: "Record Simulator", enabled: true)
+                    self.updateButton(title: "Record", enabled: true)
                 }
             }
         }
