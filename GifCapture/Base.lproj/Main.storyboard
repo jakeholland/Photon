@@ -5,10 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Record Simulator-->
+        <!--Record-->
         <scene sceneID="Q2M-Yq-Eog">
             <objects>
-                <viewController title="Record Simulator" id="qRb-EK-JKg" customClass="RecordScreenViewController" customModule="GifCapture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Record" id="qRb-EK-JKg" customClass="RecordScreenViewController" customModule="GifCapture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="pKn-IS-rXl">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -179,9 +179,10 @@
                 <windowController id="Dme-gZ-0gw" sceneMemberID="viewController">
                     <window key="window" title="Gif Capture" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="OE5-0a-yXd" userLabel="Gif Capture">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="624" y="311" width="450" height="300"/>
+                        <rect key="contentRect" x="624" y="311" width="300" height="250"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
                         <value key="minSize" type="size" width="300" height="250"/>
+                        <value key="maxSize" type="size" width="300" height="250"/>
                     </window>
                     <connections>
                         <segue destination="m4n-5a-zXZ" kind="relationship" relationship="window.shadowedContentViewController" id="Qru-Ue-gbt"/>

@@ -12,8 +12,8 @@ final class RecordScreenViewController: NSViewController {
 
     private var windows: [WindowHelper.Window] { return WindowHelper.getWindows() }
     private var recordingOptions: [(String, CGDirectDisplayID)] {
-        var options = [("Main Screen", mainScreenId), ("iOS Simulator", simulatorId)]
-        options.append(contentsOf: windows.map { ("\($0.ownerName) - \($0.name)", $0.id) })
+        let options = [("Main Screen", mainScreenId), ("iOS Simulator", simulatorId)]
+//        options.append(contentsOf: windows.map { ("\($0.ownerName) - \($0.name)", $0.id) })
 
         return options
     }
