@@ -18,8 +18,8 @@ final class ConvertViewController: NSViewController {
 extension ConvertViewController: DragViewDelegate {
 
     func dragView(didDragFileWith url: URL) {
-        ConvertGif.convert(url.relativePath) {
-            OptimizeGif.optimize(url.relativePath) { }
+        ConvertGif.convert(at: url.relativePath) {
+            OptimizeGif.optimize(at: url.relativePath, optimizationLevel: .medium) { }
         }
     }
 

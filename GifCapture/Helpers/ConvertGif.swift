@@ -13,16 +13,20 @@ enum ConvertGif {
         return path
     }
 
-    static func convert(_ filepath: String, framerate: Int = Constants.defaultFramerate, completion: @escaping () -> Void) {
-        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "fps=\(framerate),scale=\(Constants.maximumSize):-1", filepath.gif], completion: completion)
+    static func convert(at filepath: String, framerate: Int = Constants.defaultFramerate, maximumSize: Int = Constants.maximumSize, completion: @escaping () -> Void) {
+        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "fps=\(framerate),scale=\(maximumSize):-1", filepath.gif]) { _ in
+            completion()
+        }
     }
 
-    static func convertUsingPalette(_ filepath: String, framerate: Int = Constants.defaultFramerate, completion: @escaping () -> Void) {
+    static func convertUsingPalette(at filepath: String, framerate: Int = Constants.defaultFramerate, maximumSize: Int = Constants.maximumSize, completion: @escaping () -> Void) {
         let palettePath = "palette.png"
         let filters = "fps=\(framerate),scale=\(Constants.maximumSize):-1:flags=lanczos"
 
-        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "\(filters),palettegen", palettePath]) {
-            Process.run(ffmpegPath, arguments: ["-i", filepath, "-i", palettePath, "-lavfi", "\(filters)[x];[x][1:v]paletteuse", filepath.gif], completion: completion)
+        Process.run(ffmpegPath, arguments: ["-y", "-i", filepath, "-vf", "\(filters),palettegen", palettePath]) { _ in
+            Process.run(ffmpegPath, arguments: ["-i", filepath, "-i", palettePath, "-lavfi", "\(filters)[x];[x][1:v]paletteuse", filepath.gif]) { _ in
+                completion()
+            }
         }
     }
 

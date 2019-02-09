@@ -27,11 +27,11 @@ final class WindowRecordingManager {
 
             self.updateButton(title: "Converting...", enabled: false)
 
-            ConvertGif.convert(filepath) {
+            ConvertGif.convert(at: filepath) {
 
                 self.updateButton(title: "Optimizing...", enabled: false)
 
-                OptimizeGif.optimize(filepath) {
+                OptimizeGif.optimize(at: filepath, optimizationLevel: .medium) {
                     self.videoProcess = nil
                     self.updateButton(title: "Record", enabled: true)
                 }
