@@ -2,7 +2,11 @@ import Foundation
 
 enum RecordSimulator {
     
-    private static let path: String = "/usr/bin/xcrun"
+    private static var path: String {
+        guard let path = Bundle.main.path(forResource: "xcrun", ofType: nil) else { fatalError("xcrun not found") }
+        
+        return path
+    }
     
     static func record(completion: @escaping (String) -> Void) -> Process {
         let outputPath = "\(FileManager.default.temporaryDirectory.path)/ScreenRecording \(Date.currentDateString).mov"

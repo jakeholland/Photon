@@ -15,6 +15,8 @@
 		7D859602220F239F00C0DB39 /* OptimizationLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859601220F239F00C0DB39 /* OptimizationLevel.swift */; };
 		7D859604220F268200C0DB39 /* SimulatorDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859603220F268200C0DB39 /* SimulatorDevice.swift */; };
 		7D859606220F377E00C0DB39 /* RecordingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859605220F377E00C0DB39 /* RecordingOption.swift */; };
+		7D85960B220F4E7700C0DB39 /* screencapture in Resources */ = {isa = PBXBuildFile; fileRef = 7D85960A220F4E7700C0DB39 /* screencapture */; };
+		7D85960D220F4ED600C0DB39 /* xcrun in Resources */ = {isa = PBXBuildFile; fileRef = 7D85960C220F4ED600C0DB39 /* xcrun */; };
 		7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4732321D03EDE00165592 /* AppDelegate.swift */; };
 		7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732721D03EDF00165592 /* Assets.xcassets */; };
 		7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732921D03EDF00165592 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		7D859601220F239F00C0DB39 /* OptimizationLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizationLevel.swift; sourceTree = "<group>"; };
 		7D859603220F268200C0DB39 /* SimulatorDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorDevice.swift; sourceTree = "<group>"; };
 		7D859605220F377E00C0DB39 /* RecordingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingOption.swift; sourceTree = "<group>"; };
+		7D85960A220F4E7700C0DB39 /* screencapture */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = screencapture; sourceTree = "<group>"; };
+		7D85960C220F4ED600C0DB39 /* xcrun */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xcrun; sourceTree = "<group>"; };
 		7DB4732021D03EDE00165592 /* GifCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB4732321D03EDE00165592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB4732721D03EDF00165592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				7DB4732D21D03EDF00165592 /* GifCapture.entitlements */,
 				BFECC3E421E3972500B3E0FB /* gifsicle */,
 				7DB4732C21D03EDF00165592 /* Info.plist */,
+				7D85960A220F4E7700C0DB39 /* screencapture */,
+				7D85960C220F4ED600C0DB39 /* xcrun */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +226,8 @@
 				7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */,
 				BFECC3E521E3972500B3E0FB /* gifsicle in Resources */,
 				7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */,
+				7D85960D220F4ED600C0DB39 /* xcrun in Resources */,
+				7D85960B220F4E7700C0DB39 /* screencapture in Resources */,
 				BF9CE87021E94F0B00861CD0 /* ffmpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

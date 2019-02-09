@@ -3,7 +3,11 @@ import AVFoundation
 
 enum RecordScreen {
 
-    private static let path: String = "/usr/sbin/screencapture"
+    private static var path: String {
+        guard let path = Bundle.main.path(forResource: "screencapture", ofType: nil) else { fatalError("screencapture not found") }
+        
+        return path
+    }
 
     static func record(screenId: CGDirectDisplayID?, completion: @escaping (String) -> Void) -> Process {
         let outputPath = "\(FileManager.default.temporaryDirectory.path)/ScreenRecording \(Date.currentDateString).mov"
