@@ -47,9 +47,9 @@ final class RecordScreenViewController: NSViewController {
         case .simulatorId:
             simulatorRecordingManager.toggleRecording(button)
         case .mainScreenId:
-            windowRecordingManager.toggleRecording(screenId: NSScreen.main?.screenId, recordButton: button)
+            windowRecordingManager.toggleRecording(recordButton: button)
         default:
-            windowRecordingManager.toggleRecording(screenId: selectedOption.displayId, recordButton: button)
+            return
         }
     }
     

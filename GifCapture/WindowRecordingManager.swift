@@ -10,20 +10,20 @@ final class WindowRecordingManager {
 
     private init() { }
 
-    func toggleRecording(screenId: CGDirectDisplayID?, recordButton: NSButton) {
+    func toggleRecording(recordButton: NSButton) {
         self.recordButton = recordButton
 
         if isRecording {
             stopRecording()
             updateButton(title: "Processing...", enabled: false)
         } else {
-            startRecording(screenId: screenId)
+            startRecording()
             updateButton(title: "Stop", enabled: true)
         }
     }
 
-    func startRecording(screenId: CGDirectDisplayID?) {
-        videoProcess = RecordScreen.record(screenId: screenId) { filepath in
+    func startRecording() {
+        videoProcess = RecordScreen.record { filepath in
 
             self.updateButton(title: "Converting...", enabled: false)
 
