@@ -16,8 +16,8 @@ GifCapture is a free animated [.GIF](https://en.wikipedia.org/wiki/GIF) recorder
 ## License
 
 **GifCapture**'s source code and related resources are Copyright (C) Jake Holland 2019. The source code is released under the [MIT License](https://opensource.org/licenses/MIT). 
-**Gifsicle** is distributed under the GNU General Public License, Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
-**FFmpeg** is distributed under the GNU General Public License, Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
+**Gifsicle** is distributed under the [GNU General Public License, Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
+**FFmpeg** is distributed under the [GNU General Public License, Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
 ## Acknowledgments
 
