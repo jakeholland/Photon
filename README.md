@@ -1,3 +1,4 @@
+![GifCapture Icon](/GifCapture/Assets.xcassets/AppIcon.appiconset/gif-4.png?raw=true "GifCapture Icon")
 # GifCapture
 
 GifCapture is a free animated [.GIF](https://en.wikipedia.org/wiki/GIF) recorder and converter for Mac, written in [Swift](https://developer.apple.com/swift).
