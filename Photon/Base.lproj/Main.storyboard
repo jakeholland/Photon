@@ -8,7 +8,7 @@
         <!--Record-->
         <scene sceneID="Q2M-Yq-Eog">
             <objects>
-                <viewController title="Record" id="qRb-EK-JKg" customClass="RecordScreenViewController" customModule="GifCapture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Record" id="qRb-EK-JKg" customClass="RecordScreenViewController" customModule="Photon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="pKn-IS-rXl">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,12 +52,12 @@
         <!--Convert-->
         <scene sceneID="DJ4-aF-O6y">
             <objects>
-                <viewController title="Convert" id="DYq-9V-3f1" customClass="ConvertViewController" customModule="GifCapture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Convert" id="DYq-9V-3f1" customClass="ConvertViewController" customModule="Photon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="eIQ-Fu-p7X">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="nmv-SM-UqL" customClass="DragView" customModule="GifCapture" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="nmv-SM-UqL" customClass="DragView" customModule="Photon" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="410" height="260"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="92u-h4-Mfe">
@@ -121,7 +121,7 @@
         <scene sceneID="lpA-CS-3a9">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="Dme-gZ-0gw" sceneMemberID="viewController">
-                    <window key="window" title="Gif Capture" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="OE5-0a-yXd" userLabel="Gif Capture">
+                    <window key="window" title="Photon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="OE5-0a-yXd" userLabel="Gif Capture">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="624" y="311" width="300" height="250"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
@@ -145,11 +145,11 @@
                 <application id="EHL-NS-iEN" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="y4k-Zg-fen">
                         <items>
-                            <menuItem title="GifCapture" id="cJj-lY-YRF" userLabel="GifCapture">
+                            <menuItem title="Photon" id="cJj-lY-YRF">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="GifCapture" systemMenu="apple" id="5mI-62-N0w">
+                                <menu key="submenu" title="Photon" systemMenu="apple" id="5mI-62-N0w">
                                     <items>
-                                        <menuItem title="About Reminderz" id="nWN-Q3-s4e" userLabel="About GifCapture">
+                                        <menuItem title="About Photon" id="nWN-Q3-s4e" userLabel="About Photon">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="XGh-yT-zud"/>
@@ -160,7 +160,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="IuD-0e-RrV"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="xq3-8t-2G8"/>
-                                        <menuItem title="Hide Reminderz" keyEquivalent="h" id="Fyf-86-yf6"/>
+                                        <menuItem title="Hide Photon" keyEquivalent="h" id="Fyf-86-yf6"/>
                                         <menuItem title="Hide Others" keyEquivalent="h" id="YD8-tz-itM">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                         </menuItem>
@@ -168,7 +168,7 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="NR4-Q5-BDF"/>
-                                        <menuItem title="Quit Reminderz" keyEquivalent="q" id="IfY-gS-NVd"/>
+                                        <menuItem title="Quit Photon" keyEquivalent="q" id="IfY-gS-NVd"/>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -503,7 +503,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="eM6-Xe-YCB">
                                     <items>
-                                        <menuItem title="Reminderz Help" keyEquivalent="?" id="Prz-t4-4o2"/>
+                                        <menuItem title="Photon Help" keyEquivalent="?" id="Prz-t4-4o2"/>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -514,7 +514,7 @@
                     </connections>
                 </application>
                 <customObject id="lr2-P1-XxG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="WzX-sA-4dN" userLabel="App Delegate" customClass="AppDelegate" customModule="GifCapture" customModuleProvider="target"/>
+                <customObject id="WzX-sA-4dN" userLabel="App Delegate" customClass="AppDelegate" customModule="Photon" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-444" y="-687"/>
         </scene>

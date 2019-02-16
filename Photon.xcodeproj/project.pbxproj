@@ -41,7 +41,7 @@
 		7D859603220F268200C0DB39 /* SimulatorDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorDevice.swift; sourceTree = "<group>"; };
 		7D859605220F377E00C0DB39 /* RecordingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingOption.swift; sourceTree = "<group>"; };
 		7D85960C220F4ED600C0DB39 /* xcrun */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xcrun; sourceTree = "<group>"; };
-		7DB4732021D03EDE00165592 /* GifCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB4732021D03EDE00165592 /* Photon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB4732321D03EDE00165592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB4732721D03EDF00165592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DB4732A21D03EDF00165592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		7DB4731721D03EDE00165592 = {
 			isa = PBXGroup;
 			children = (
-				7DB4732221D03EDE00165592 /* GifCapture */,
+				7DB4732221D03EDE00165592 /* Photon */,
 				7DB4732121D03EDE00165592 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,12 +104,12 @@
 		7DB4732121D03EDE00165592 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DB4732021D03EDE00165592 /* GifCapture.app */,
+				7DB4732021D03EDE00165592 /* Photon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7DB4732221D03EDE00165592 /* GifCapture */ = {
+		7DB4732221D03EDE00165592 /* Photon */ = {
 			isa = PBXGroup;
 			children = (
 				7DB4732321D03EDE00165592 /* AppDelegate.swift */,
@@ -123,7 +123,7 @@
 				BF17AFA721E8F2C400906F25 /* View Controllers */,
 				BF17AFAA21E8F88F00906F25 /* Views */,
 			);
-			path = GifCapture;
+			path = Photon;
 			sourceTree = "<group>";
 		};
 		BF17AFA621E8F21C00906F25 /* Helpers */ = {
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DB4731F21D03EDE00165592 /* GifCapture */ = {
+		7DB4731F21D03EDE00165592 /* Photon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DB4733021D03EDF00165592 /* Build configuration list for PBXNativeTarget "GifCapture" */;
+			buildConfigurationList = 7DB4733021D03EDF00165592 /* Build configuration list for PBXNativeTarget "Photon" */;
 			buildPhases = (
 				7DB4731C21D03EDE00165592 /* Sources */,
 				7DB4731D21D03EDE00165592 /* Frameworks */,
@@ -172,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = GifCapture;
+			name = Photon;
 			productName = GifCapture;
-			productReference = 7DB4732021D03EDE00165592 /* GifCapture.app */;
+			productReference = 7DB4732021D03EDE00165592 /* Photon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -197,7 +197,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7DB4731B21D03EDE00165592 /* Build configuration list for PBXProject "GifCapture" */;
+			buildConfigurationList = 7DB4731B21D03EDE00165592 /* Build configuration list for PBXProject "Photon" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -210,7 +210,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DB4731F21D03EDE00165592 /* GifCapture */,
+				7DB4731F21D03EDE00165592 /* Photon */,
 			);
 		};
 /* End PBXProject section */
@@ -391,12 +391,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
-				INFOPLIST_FILE = GifCapture/Resources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Photon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.GifCapture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.Photon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -409,12 +409,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
-				INFOPLIST_FILE = GifCapture/Resources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Photon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.GifCapture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.Photon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -423,7 +423,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DB4731B21D03EDE00165592 /* Build configuration list for PBXProject "GifCapture" */ = {
+		7DB4731B21D03EDE00165592 /* Build configuration list for PBXProject "Photon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DB4732E21D03EDF00165592 /* Debug */,
@@ -432,7 +432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DB4733021D03EDF00165592 /* Build configuration list for PBXNativeTarget "GifCapture" */ = {
+		7DB4733021D03EDF00165592 /* Build configuration list for PBXNativeTarget "Photon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DB4733121D03EDF00165592 /* Debug */,
