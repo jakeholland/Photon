@@ -1,4 +1,4 @@
-![Photon Icon](/GifCapture/Assets.xcassets/AppIcon.appiconset/Icon-256.png?raw=true "Photon Icon")
+![Photon Icon](/Photon/Assets.xcassets/AppIcon.appiconset/Icon-256.png?raw=true "Photon Icon")
 # Photon
 
 Photon is a free animated [.GIF](https://en.wikipedia.org/wiki/GIF) recorder and converter for Mac, written in [Swift](https://developer.apple.com/swift).
