@@ -1,11 +1,11 @@
-![GifCapture Icon](/GifCapture/Assets.xcassets/AppIcon.appiconset/gif-4.png?raw=true "GifCapture Icon")
-# GifCapture
+![Photon Icon](/GifCapture/Assets.xcassets/AppIcon.appiconset/Icon-256.png?raw=true "Photon Icon")
+# Photon
 
-GifCapture is a free animated [.GIF](https://en.wikipedia.org/wiki/GIF) recorder and converter for Mac, written in [Swift](https://developer.apple.com/swift).
+Photon is a free animated [.GIF](https://en.wikipedia.org/wiki/GIF) recorder and converter for Mac, written in [Swift](https://developer.apple.com/swift).
 
 ## Features
 
-- Recording iOS Simualtor
+- Recording iOS Simulator
 - Recording Screen
 - Converting MOV to GIF
 
@@ -15,7 +15,7 @@ GifCapture is a free animated [.GIF](https://en.wikipedia.org/wiki/GIF) recorder
 
 ## License
 
-**GifCapture**'s source code and related resources are Copyright (C) Jake Holland 2019. The source code is released under the [MIT License](https://opensource.org/licenses/MIT). 
+**Photon**'s source code and related resources are Copyright (C) Jake Holland 2019. The source code is released under the [MIT License](https://opensource.org/licenses/MIT).
 **Gifsicle** is distributed under the [GNU General Public License, Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 **FFmpeg** is distributed under the [GNU General Public License, Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
