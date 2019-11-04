@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		7D02B76121E274DB009B12E4 /* OptimizeGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76021E274DB009B12E4 /* OptimizeGif.swift */; };
 		7D02B76321E27589009B12E4 /* ProcessExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76221E27589009B12E4 /* ProcessExtension.swift */; };
-		7D02B76521E27AD1009B12E4 /* RecordSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */; };
+		7D02B76521E27AD1009B12E4 /* RecordAppleSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76421E27AD1009B12E4 /* RecordAppleSimulator.swift */; };
 		7D02B76721E29447009B12E4 /* ConvertGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76621E29447009B12E4 /* ConvertGif.swift */; };
 		7D02B76921E29490009B12E4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D02B76821E29490009B12E4 /* StringExtension.swift */; };
 		7D859602220F239F00C0DB39 /* OptimizationLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859601220F239F00C0DB39 /* OptimizationLevel.swift */; };
-		7D859604220F268200C0DB39 /* SimulatorDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859603220F268200C0DB39 /* SimulatorDevice.swift */; };
+		7D859604220F268200C0DB39 /* AppleSimulatorDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859603220F268200C0DB39 /* AppleSimulatorDevice.swift */; };
 		7D859606220F377E00C0DB39 /* RecordingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859605220F377E00C0DB39 /* RecordingOption.swift */; };
 		7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4732321D03EDE00165592 /* AppDelegate.swift */; };
 		7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732721D03EDF00165592 /* Assets.xcassets */; };
 		7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732921D03EDF00165592 /* Main.storyboard */; };
-		7DB4733421D03F3000165592 /* SimulatorRecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4733321D03F3000165592 /* SimulatorRecordingManager.swift */; };
+		7DB4733421D03F3000165592 /* AppleSimulatorRecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4733321D03F3000165592 /* AppleSimulatorRecordingManager.swift */; };
 		BF17AFA921E8F2DB00906F25 /* RecordScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17AFA821E8F2DB00906F25 /* RecordScreenViewController.swift */; };
 		BF17AFAC21E8F89F00906F25 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17AFAB21E8F89F00906F25 /* DragView.swift */; };
 		BF9CE86621E9121500861CD0 /* WindowRecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */; };
@@ -27,17 +27,19 @@
 		BF9CE86C21E936E200861CD0 /* NSScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE86B21E936E200861CD0 /* NSScreenExtension.swift */; };
 		BF9CE87021E94F0B00861CD0 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF9CE86F21E94F0B00861CD0 /* ffmpeg */; };
 		BFAD622721EFC77D005E105A /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD622621EFC77D005E105A /* ConvertViewController.swift */; };
+		BFB3E40F2370BA3700CCECF4 /* RecordAndroidEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3E40E2370BA3700CCECF4 /* RecordAndroidEmulator.swift */; };
+		BFB3E4112370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3E4102370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift */; };
 		BFECC3E521E3972500B3E0FB /* gifsicle in Resources */ = {isa = PBXBuildFile; fileRef = BFECC3E421E3972500B3E0FB /* gifsicle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D02B76021E274DB009B12E4 /* OptimizeGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizeGif.swift; sourceTree = "<group>"; };
 		7D02B76221E27589009B12E4 /* ProcessExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessExtension.swift; sourceTree = "<group>"; };
-		7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSimulator.swift; sourceTree = "<group>"; };
+		7D02B76421E27AD1009B12E4 /* RecordAppleSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAppleSimulator.swift; sourceTree = "<group>"; };
 		7D02B76621E29447009B12E4 /* ConvertGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertGif.swift; sourceTree = "<group>"; };
 		7D02B76821E29490009B12E4 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7D859601220F239F00C0DB39 /* OptimizationLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizationLevel.swift; sourceTree = "<group>"; };
-		7D859603220F268200C0DB39 /* SimulatorDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorDevice.swift; sourceTree = "<group>"; };
+		7D859603220F268200C0DB39 /* AppleSimulatorDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSimulatorDevice.swift; sourceTree = "<group>"; };
 		7D859605220F377E00C0DB39 /* RecordingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingOption.swift; sourceTree = "<group>"; };
 		7DB4732021D03EDE00165592 /* Photon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB4732321D03EDE00165592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +47,7 @@
 		7DB4732A21D03EDF00165592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DB4732C21D03EDF00165592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DB4732D21D03EDF00165592 /* Photon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Photon.entitlements; sourceTree = "<group>"; };
-		7DB4733321D03F3000165592 /* SimulatorRecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRecordingManager.swift; sourceTree = "<group>"; };
+		7DB4733321D03F3000165592 /* AppleSimulatorRecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSimulatorRecordingManager.swift; sourceTree = "<group>"; };
 		BF17AFA821E8F2DB00906F25 /* RecordScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordScreenViewController.swift; sourceTree = "<group>"; };
 		BF17AFAB21E8F89F00906F25 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 		BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowRecordingManager.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		BF9CE86B21E936E200861CD0 /* NSScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSScreenExtension.swift; sourceTree = "<group>"; };
 		BF9CE86F21E94F0B00861CD0 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 		BFAD622621EFC77D005E105A /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
+		BFB3E40E2370BA3700CCECF4 /* RecordAndroidEmulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAndroidEmulator.swift; sourceTree = "<group>"; };
+		BFB3E4102370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidEmulatorRecordingManager.swift; sourceTree = "<group>"; };
 		BFECC3E421E3972500B3E0FB /* gifsicle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = gifsicle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,14 +128,16 @@
 		BF17AFA621E8F21C00906F25 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BFB3E4102370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift */,
+				7D859603220F268200C0DB39 /* AppleSimulatorDevice.swift */,
+				7DB4733321D03F3000165592 /* AppleSimulatorRecordingManager.swift */,
 				7D02B76621E29447009B12E4 /* ConvertGif.swift */,
 				7D859601220F239F00C0DB39 /* OptimizationLevel.swift */,
 				7D02B76021E274DB009B12E4 /* OptimizeGif.swift */,
+				BFB3E40E2370BA3700CCECF4 /* RecordAndroidEmulator.swift */,
+				7D02B76421E27AD1009B12E4 /* RecordAppleSimulator.swift */,
 				7D859605220F377E00C0DB39 /* RecordingOption.swift */,
 				BF9CE86721E9145200861CD0 /* RecordScreen.swift */,
-				7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */,
-				7D859603220F268200C0DB39 /* SimulatorDevice.swift */,
-				7DB4733321D03F3000165592 /* SimulatorRecordingManager.swift */,
 				BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */,
 			);
 			path = Helpers;
@@ -236,17 +242,19 @@
 				BF9CE86A21E925DC00861CD0 /* DateExtension.swift in Sources */,
 				BFAD622721EFC77D005E105A /* ConvertViewController.swift in Sources */,
 				7D02B76921E29490009B12E4 /* StringExtension.swift in Sources */,
-				7D859604220F268200C0DB39 /* SimulatorDevice.swift in Sources */,
-				7D02B76521E27AD1009B12E4 /* RecordSimulator.swift in Sources */,
+				7D859604220F268200C0DB39 /* AppleSimulatorDevice.swift in Sources */,
+				7D02B76521E27AD1009B12E4 /* RecordAppleSimulator.swift in Sources */,
 				7D859602220F239F00C0DB39 /* OptimizationLevel.swift in Sources */,
 				BF9CE86621E9121500861CD0 /* WindowRecordingManager.swift in Sources */,
-				7DB4733421D03F3000165592 /* SimulatorRecordingManager.swift in Sources */,
+				7DB4733421D03F3000165592 /* AppleSimulatorRecordingManager.swift in Sources */,
 				7D02B76321E27589009B12E4 /* ProcessExtension.swift in Sources */,
 				7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */,
+				BFB3E40F2370BA3700CCECF4 /* RecordAndroidEmulator.swift in Sources */,
 				BF9CE86C21E936E200861CD0 /* NSScreenExtension.swift in Sources */,
 				7D02B76121E274DB009B12E4 /* OptimizeGif.swift in Sources */,
 				7D859606220F377E00C0DB39 /* RecordingOption.swift in Sources */,
 				BF17AFA921E8F2DB00906F25 /* RecordScreenViewController.swift in Sources */,
+				BFB3E4112370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift in Sources */,
 				BF9CE86821E9145200861CD0 /* RecordScreen.swift in Sources */,
 				BF17AFAC21E8F89F00906F25 /* DragView.swift in Sources */,
 			);
@@ -388,7 +396,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = SU4T96VBX6;
+				DEVELOPMENT_TEAM = HHDJ8Q86HV;
 				INFOPLIST_FILE = "$(SRCROOT)/Photon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,7 +416,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = SU4T96VBX6;
+				DEVELOPMENT_TEAM = HHDJ8Q86HV;
 				INFOPLIST_FILE = "$(SRCROOT)/Photon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

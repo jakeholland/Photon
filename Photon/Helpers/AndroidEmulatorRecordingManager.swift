@@ -1,9 +1,9 @@
 import Cocoa
 
-final class SimulatorRecordingManager {
-    
-    static let shared = SimulatorRecordingManager()
-    
+final class AndroidEmulatorRecordingManager {
+
+    static let shared = AndroidEmulatorRecordingManager()
+
     private var videoProcess: Process?
     private var recordButton: NSButton?
     private var isRecording: Bool { return videoProcess != nil }
@@ -12,7 +12,7 @@ final class SimulatorRecordingManager {
 
     func toggleRecording(_ recordbutton: NSButton) {
         self.recordButton = recordbutton
-        
+
         if isRecording {
             stopRecording()
             updateButton(title: "Processing...", enabled: false)
@@ -21,9 +21,9 @@ final class SimulatorRecordingManager {
             updateButton(title: "Stop", enabled: true)
         }
     }
-    
+
     func startRecording() {
-        videoProcess = RecordSimulator.record { filepath in
+        videoProcess = RecordAndroidEmulator.record { filepath in
 
             self.updateButton(title: "Converting...", enabled: false)
 
@@ -38,7 +38,7 @@ final class SimulatorRecordingManager {
             }
         }
     }
-    
+
     func stopRecording() {
         videoProcess?.interrupt()
     }

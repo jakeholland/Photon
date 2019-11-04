@@ -5,7 +5,8 @@ final class RecordScreenViewController: NSViewController {
     @IBOutlet private var popUpButton: NSPopUpButton!
 
     private let windowRecordingManager = WindowRecordingManager.shared
-    private let simulatorRecordingManager = SimulatorRecordingManager.shared
+    private let appleSimulatorRecordingManager = AppleSimulatorRecordingManager.shared
+    private let androidEmulatorRecordingManager = AndroidEmulatorRecordingManager.shared
 
     private var recordingOptions: [RecordingOption] = [] {
         willSet {
@@ -44,23 +45,32 @@ final class RecordScreenViewController: NSViewController {
         let selectedOption = recordingOptions[popUpButton.indexOfSelectedItem]
 
         switch selectedOption.displayId {
-        case .simulatorId:
-            simulatorRecordingManager.toggleRecording(button)
         case .mainScreenId:
             windowRecordingManager.toggleRecording(recordButton: button)
+        case .appleSimulatorId:
+            appleSimulatorRecordingManager.toggleRecording(button)
+        case .androidEmulatorId:
+            androidEmulatorRecordingManager.toggleRecording(button)
         default:
             return
         }
     }
     
     private func refreshAvailableRecordingDevices() {
-        RecordSimulator.getRunningSimulators { simulatorDevices in
-            var recordingOptions: [RecordingOption] = [RecordingOption(title: "Main Screen", displayId: .mainScreenId)]
-            if !simulatorDevices.isEmpty {
-                recordingOptions.insert(RecordingOption(title: "iOS Simulator", displayId: .simulatorId), at: 0)
+        var recordingOptions: [RecordingOption] = [RecordingOption(title: "Main Screen", displayId: .mainScreenId)]
+
+        RecordAndroidEmulator.getRunningAndroidEmulators { show in
+            if show {
+                recordingOptions.insert(RecordingOption(title: "Android Emulator", displayId: .androidEmulatorId), at: 0)
             }
-            
-            self.recordingOptions = recordingOptions
+
+            RecordAppleSimulator.getRunningSimulators { simulatorDevices in
+                if !simulatorDevices.isEmpty {
+                    recordingOptions.insert(RecordingOption(title: "iOS Simulator", displayId: .appleSimulatorId), at: 0)
+                }
+
+                self.recordingOptions = recordingOptions
+            }
         }
     }
 
