@@ -15,7 +15,6 @@
 		7D859602220F239F00C0DB39 /* OptimizationLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859601220F239F00C0DB39 /* OptimizationLevel.swift */; };
 		7D859604220F268200C0DB39 /* SimulatorDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859603220F268200C0DB39 /* SimulatorDevice.swift */; };
 		7D859606220F377E00C0DB39 /* RecordingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859605220F377E00C0DB39 /* RecordingOption.swift */; };
-		7D85960D220F4ED600C0DB39 /* xcrun in Resources */ = {isa = PBXBuildFile; fileRef = 7D85960C220F4ED600C0DB39 /* xcrun */; };
 		7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4732321D03EDE00165592 /* AppDelegate.swift */; };
 		7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732721D03EDF00165592 /* Assets.xcassets */; };
 		7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4732921D03EDF00165592 /* Main.storyboard */; };
@@ -40,7 +39,6 @@
 		7D859601220F239F00C0DB39 /* OptimizationLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizationLevel.swift; sourceTree = "<group>"; };
 		7D859603220F268200C0DB39 /* SimulatorDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorDevice.swift; sourceTree = "<group>"; };
 		7D859605220F377E00C0DB39 /* RecordingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingOption.swift; sourceTree = "<group>"; };
-		7D85960C220F4ED600C0DB39 /* xcrun */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xcrun; sourceTree = "<group>"; };
 		7DB4732021D03EDE00165592 /* Photon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB4732321D03EDE00165592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB4732721D03EDF00165592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,10 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				BF9CE86F21E94F0B00861CD0 /* ffmpeg */,
-				7DB4732D21D03EDF00165592 /* Photon.entitlements */,
 				BFECC3E421E3972500B3E0FB /* gifsicle */,
 				7DB4732C21D03EDF00165592 /* Info.plist */,
-				7D85960C220F4ED600C0DB39 /* xcrun */,
+				7DB4732D21D03EDF00165592 /* Photon.entitlements */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -113,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				7DB4732321D03EDE00165592 /* AppDelegate.swift */,
-				7DB4733321D03F3000165592 /* SimulatorRecordingManager.swift */,
-				BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */,
 				7DB4732921D03EDF00165592 /* Main.storyboard */,
 				7DB4732721D03EDF00165592 /* Assets.xcassets */,
 				7D02B76A21E295C5009B12E4 /* Extensions */,
@@ -136,6 +131,8 @@
 				BF9CE86721E9145200861CD0 /* RecordScreen.swift */,
 				7D02B76421E27AD1009B12E4 /* RecordSimulator.swift */,
 				7D859603220F268200C0DB39 /* SimulatorDevice.swift */,
+				7DB4733321D03F3000165592 /* SimulatorRecordingManager.swift */,
+				BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -143,8 +140,8 @@
 		BF17AFA721E8F2C400906F25 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF17AFA821E8F2DB00906F25 /* RecordScreenViewController.swift */,
 				BFAD622621EFC77D005E105A /* ConvertViewController.swift */,
+				BF17AFA821E8F2DB00906F25 /* RecordScreenViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -184,11 +181,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Jacob Holland";
 				TargetAttributes = {
 					7DB4731F21D03EDE00165592 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1120;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -223,7 +221,6 @@
 				7DB4732821D03EDF00165592 /* Assets.xcassets in Resources */,
 				BFECC3E521E3972500B3E0FB /* gifsicle in Resources */,
 				7DB4732B21D03EDF00165592 /* Main.storyboard in Resources */,
-				7D85960D220F4ED600C0DB39 /* xcrun in Resources */,
 				BF9CE87021E94F0B00861CD0 /* ffmpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
@@ -399,7 +397,7 @@
 				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.photon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -407,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
@@ -418,7 +417,7 @@
 				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.photon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

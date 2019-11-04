@@ -53,8 +53,10 @@ private let NSFilenamesPboardType = NSPasteboard.PasteboardType("NSFilenamesPboa
 
 extension NSDraggingInfo {
     var draggedFileURL: URL? {
-        guard let filenames = draggingPasteboard.propertyList(forType: NSFilenamesPboardType) as? [String],
-            let path = filenames.first else { return nil }
+        guard
+            let filenames = draggingPasteboard.propertyList(forType: NSFilenamesPboardType) as? [String],
+            let path = filenames.first
+            else { return nil }
 
         return URL(fileURLWithPath: path)
     }
