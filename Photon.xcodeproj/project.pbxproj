@@ -29,6 +29,8 @@
 		BFAD622721EFC77D005E105A /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD622621EFC77D005E105A /* ConvertViewController.swift */; };
 		BFB3E40F2370BA3700CCECF4 /* RecordAndroidEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3E40E2370BA3700CCECF4 /* RecordAndroidEmulator.swift */; };
 		BFB3E4112370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3E4102370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift */; };
+		BFE6AF11237DC9290069FA8C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6AF10237DC9290069FA8C /* Settings.swift */; };
+		BFE6AF13237DCB830069FA8C /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6AF12237DCB830069FA8C /* FileManagerExtension.swift */; };
 		BFECC3E521E3972500B3E0FB /* gifsicle in Resources */ = {isa = PBXBuildFile; fileRef = BFECC3E421E3972500B3E0FB /* gifsicle */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		BFAD622621EFC77D005E105A /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 		BFB3E40E2370BA3700CCECF4 /* RecordAndroidEmulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAndroidEmulator.swift; sourceTree = "<group>"; };
 		BFB3E4102370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidEmulatorRecordingManager.swift; sourceTree = "<group>"; };
+		BFE6AF10237DC9290069FA8C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BFE6AF12237DCB830069FA8C /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		BFECC3E421E3972500B3E0FB /* gifsicle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = gifsicle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9CE86921E925DC00861CD0 /* DateExtension.swift */,
+				BFE6AF12237DCB830069FA8C /* FileManagerExtension.swift */,
 				BF9CE86B21E936E200861CD0 /* NSScreenExtension.swift */,
 				7D02B76221E27589009B12E4 /* ProcessExtension.swift */,
 				7D02B76821E29490009B12E4 /* StringExtension.swift */,
@@ -138,6 +143,7 @@
 				7D02B76421E27AD1009B12E4 /* RecordAppleSimulator.swift */,
 				7D859605220F377E00C0DB39 /* RecordingOption.swift */,
 				BF9CE86721E9145200861CD0 /* RecordScreen.swift */,
+				BFE6AF10237DC9290069FA8C /* Settings.swift */,
 				BF9CE86521E9121500861CD0 /* WindowRecordingManager.swift */,
 			);
 			path = Helpers;
@@ -248,10 +254,12 @@
 				BF9CE86621E9121500861CD0 /* WindowRecordingManager.swift in Sources */,
 				7DB4733421D03F3000165592 /* AppleSimulatorRecordingManager.swift in Sources */,
 				7D02B76321E27589009B12E4 /* ProcessExtension.swift in Sources */,
+				BFE6AF13237DCB830069FA8C /* FileManagerExtension.swift in Sources */,
 				7DB4732421D03EDE00165592 /* AppDelegate.swift in Sources */,
 				BFB3E40F2370BA3700CCECF4 /* RecordAndroidEmulator.swift in Sources */,
 				BF9CE86C21E936E200861CD0 /* NSScreenExtension.swift in Sources */,
 				7D02B76121E274DB009B12E4 /* OptimizeGif.swift in Sources */,
+				BFE6AF11237DC9290069FA8C /* Settings.swift in Sources */,
 				7D859606220F377E00C0DB39 /* RecordingOption.swift in Sources */,
 				BF17AFA921E8F2DB00906F25 /* RecordScreenViewController.swift in Sources */,
 				BFB3E4112370BD4800CCECF4 /* AndroidEmulatorRecordingManager.swift in Sources */,

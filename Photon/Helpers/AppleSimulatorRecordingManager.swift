@@ -3,7 +3,8 @@ import Cocoa
 final class AppleSimulatorRecordingManager {
     
     static let shared = AppleSimulatorRecordingManager()
-    
+
+    private let settings = Settings()
     private var videoProcess: Process?
     private var recordButton: NSButton?
     private var isRecording: Bool { return videoProcess != nil }
@@ -24,7 +25,6 @@ final class AppleSimulatorRecordingManager {
     
     func startRecording() {
         videoProcess = RecordAppleSimulator.record { filepath in
-
             self.updateButton(title: "Converting...", enabled: false)
 
             ConvertGif.convert(at: filepath) {
@@ -32,6 +32,9 @@ final class AppleSimulatorRecordingManager {
                 self.updateButton(title: "Optimizing...", enabled: false)
 
                 OptimizeGif.optimize(at: filepath, optimizationLevel: .medium) {
+                    if self.settings.shouldSaveVideoFile {
+                        FileManager.default.copyItemToDesktop(atPath: filepath)
+                    }
                     self.videoProcess = nil
                     self.updateButton(title: "Record", enabled: true)
                 }

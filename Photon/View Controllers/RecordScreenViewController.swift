@@ -3,10 +3,12 @@ import AppKit
 final class RecordScreenViewController: NSViewController {
 
     @IBOutlet private var popUpButton: NSPopUpButton!
+    @IBOutlet private var saveVideoChecknox: NSButton!
 
     private let windowRecordingManager = WindowRecordingManager.shared
     private let appleSimulatorRecordingManager = AppleSimulatorRecordingManager.shared
     private let androidEmulatorRecordingManager = AndroidEmulatorRecordingManager.shared
+    private let settings = Settings()
 
     private var recordingOptions: [RecordingOption] = [] {
         willSet {
@@ -25,6 +27,7 @@ final class RecordScreenViewController: NSViewController {
         super.viewDidLoad()
 
         refreshAvailableRecordingDevices()
+        saveVideoChecknox.state = settings.shouldSaveVideoFile ? .on : .off
     }
 
     override func viewWillAppear() {
@@ -55,18 +58,23 @@ final class RecordScreenViewController: NSViewController {
             return
         }
     }
+
+    @IBAction private func saveVideoPressed(_ button: NSButton) {
+        let saveVideo = (button.state == .on)
+        settings.shouldSaveVideoFile = saveVideo
+    }
     
     private func refreshAvailableRecordingDevices() {
         var recordingOptions: [RecordingOption] = [RecordingOption(title: "Main Screen", displayId: .mainScreenId)]
 
         RecordAndroidEmulator.getRunningAndroidEmulators { show in
             if show {
-                recordingOptions.insert(RecordingOption(title: "Android Emulator", displayId: .androidEmulatorId), at: 0)
+                recordingOptions.insert(RecordingOption(title: "Android Device", displayId: .androidEmulatorId), at: 0)
             }
 
             RecordAppleSimulator.getRunningSimulators { simulatorDevices in
                 if !simulatorDevices.isEmpty {
-                    recordingOptions.insert(RecordingOption(title: "iOS Simulator", displayId: .appleSimulatorId), at: 0)
+                    recordingOptions.insert(RecordingOption(title: "iOS Device", displayId: .appleSimulatorId), at: 0)
                 }
 
                 self.recordingOptions = recordingOptions

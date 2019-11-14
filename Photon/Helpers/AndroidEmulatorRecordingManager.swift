@@ -4,6 +4,7 @@ final class AndroidEmulatorRecordingManager {
 
     static let shared = AndroidEmulatorRecordingManager()
 
+    private let settings = Settings()
     private var videoProcess: Process?
     private var recordButton: NSButton?
     private var isRecording: Bool { return videoProcess != nil }
@@ -32,6 +33,9 @@ final class AndroidEmulatorRecordingManager {
                 self.updateButton(title: "Optimizing...", enabled: false)
 
                 OptimizeGif.optimize(at: filepath, optimizationLevel: .medium) {
+                    if self.settings.shouldSaveVideoFile {
+                        FileManager.default.copyItemToDesktop(atPath: filepath)
+                    }
                     self.videoProcess = nil
                     self.updateButton(title: "Record", enabled: true)
                 }
