@@ -6,6 +6,8 @@ Photon is a free animated [.GIF](https://en.wikipedia.org/wiki/GIF) recorder and
 ## Features
 
 - Recording iOS Simulator
+- Recording Android Emulator
+- Recoding connected Android device (Must be in USB debugging mode)
 - Recording Screen
 - Converting MOV to GIF
 
