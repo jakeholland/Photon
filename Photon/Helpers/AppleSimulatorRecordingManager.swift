@@ -1,8 +1,8 @@
 import Cocoa
 
-final class WindowRecordingManager {
-
-    static let shared = WindowRecordingManager()
+final class AppleSimulatorRecordingManager {
+    
+    static let shared = AppleSimulatorRecordingManager()
 
     private let settings = Settings()
     private var videoProcess: Process?
@@ -11,9 +11,9 @@ final class WindowRecordingManager {
 
     private init() { }
 
-    func toggleRecording(recordButton: NSButton) {
-        self.recordButton = recordButton
-
+    func toggleRecording(_ recordbutton: NSButton) {
+        self.recordButton = recordbutton
+        
         if isRecording {
             stopRecording()
             updateButton(title: "Processing...", enabled: false)
@@ -22,10 +22,9 @@ final class WindowRecordingManager {
             updateButton(title: "Stop", enabled: true)
         }
     }
-
+    
     func startRecording() {
-        videoProcess = RecordScreen.record { filepath in
-
+        videoProcess = RecordAppleSimulator.record { filepath in
             self.updateButton(title: "Converting...", enabled: false)
 
             ConvertGif.convert(at: filepath) {
@@ -42,7 +41,7 @@ final class WindowRecordingManager {
             }
         }
     }
-
+    
     func stopRecording() {
         videoProcess?.interrupt()
     }

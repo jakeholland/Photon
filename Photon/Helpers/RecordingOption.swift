@@ -8,6 +8,7 @@ struct RecordingOption {
 extension RecordingOption: Equatable { }
 
 extension CGDirectDisplayID {
-    static var simulatorId: CGDirectDisplayID = 1
     static var mainScreenId: CGDirectDisplayID = 0
+    static var appleSimulatorId: CGDirectDisplayID = 1
+    static var androidEmulatorId: CGDirectDisplayID = 2
 }

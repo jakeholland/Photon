@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Dme-gZ-0gw">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Dme-gZ-0gw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,8 +14,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XWN-OX-JpU">
+                                <rect key="frame" x="18" y="256" width="415" height="25"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="0Ed-8J-RFb">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="Dbn-GO-a2o"/>
+                                </popUpButtonCell>
+                            </popUpButton>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ESK-53-16Y">
-                                <rect key="frame" x="14" y="13" width="422" height="32"/>
+                                <rect key="frame" x="14" y="47" width="422" height="32"/>
                                 <buttonCell key="cell" type="push" title="Record" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Su-DM-IF8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -23,26 +32,32 @@
                                     <action selector="recordButtonPressed:" target="qRb-EK-JKg" id="r3Z-iJ-GvX"/>
                                 </connections>
                             </button>
-                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XWN-OX-JpU">
-                                <rect key="frame" x="18" y="256" width="415" height="25"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="0Ed-8J-RFb">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="Dbn-GO-a2o"/>
-                                </popUpButtonCell>
-                            </popUpButton>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="osw-XH-9lh">
+                                <rect key="frame" x="18" y="18" width="414" height="18"/>
+                                <buttonCell key="cell" type="check" title="Save Video File" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="n4g-Mi-OG6">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveVideoPressed:" target="qRb-EK-JKg" id="Djy-rT-kgz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="osw-XH-9lh" firstAttribute="leading" secondItem="pKn-IS-rXl" secondAttribute="leading" constant="20" id="4g5-4h-1S2"/>
                             <constraint firstItem="XWN-OX-JpU" firstAttribute="top" secondItem="pKn-IS-rXl" secondAttribute="top" constant="20" id="6Ds-mY-Atw"/>
                             <constraint firstItem="XWN-OX-JpU" firstAttribute="leading" secondItem="pKn-IS-rXl" secondAttribute="leading" constant="20" id="CX5-E3-LbX"/>
+                            <constraint firstItem="osw-XH-9lh" firstAttribute="top" secondItem="ESK-53-16Y" secondAttribute="bottom" constant="20" id="a7Y-IH-qBu"/>
                             <constraint firstAttribute="trailing" secondItem="ESK-53-16Y" secondAttribute="trailing" constant="20" id="d0H-Ig-eKe"/>
-                            <constraint firstAttribute="bottom" secondItem="ESK-53-16Y" secondAttribute="bottom" constant="20" id="omH-jv-TDr"/>
                             <constraint firstItem="ESK-53-16Y" firstAttribute="leading" secondItem="pKn-IS-rXl" secondAttribute="leading" constant="20" id="pNZ-bf-dgI"/>
+                            <constraint firstAttribute="bottom" secondItem="osw-XH-9lh" secondAttribute="bottom" constant="20" id="qCy-d1-fvn"/>
                             <constraint firstAttribute="trailing" secondItem="XWN-OX-JpU" secondAttribute="trailing" constant="20" id="qGs-Fj-hPG"/>
+                            <constraint firstAttribute="trailing" secondItem="osw-XH-9lh" secondAttribute="trailing" constant="20" id="wU3-7e-tGY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="popUpButton" destination="XWN-OX-JpU" id="Zfu-fg-qDA"/>
+                        <outlet property="saveVideoChecknox" destination="osw-XH-9lh" id="CLH-T5-KCc"/>
                     </connections>
                 </viewController>
                 <customObject id="2KR-zt-uJM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -61,7 +76,7 @@
                                 <rect key="frame" x="20" y="20" width="410" height="260"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="92u-h4-Mfe">
-                                        <rect key="frame" x="120" y="122" width="170" height="17"/>
+                                        <rect key="frame" x="120" y="122" width="170" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="DROP VIDEO TO CONVERT" id="QMh-gw-QvG">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -102,7 +117,7 @@
                     <tabView key="tabView" type="noTabsNoBorder" id="Yd0-bA-8GR">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                         <connections>
                             <outlet property="delegate" destination="m4n-5a-zXZ" id="PQD-6L-Oae"/>
                         </connections>

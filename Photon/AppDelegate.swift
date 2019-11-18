@@ -8,7 +8,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
-        SimulatorRecordingManager.shared.stopRecording()
+        AppleSimulatorRecordingManager.shared.stopRecording()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
